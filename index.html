@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Google Colab & Antigravity Agent Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #2563eb;
+      --primary-dark: #1d4ed8;
+      --colab-orange: #f59e0b;
+      --bg: #0f172a;
+      --card-bg: #1e293b;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --border: #334155;
+      --success: #10b981;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Pretendard', sans-serif; }
+    body { background-color: var(--bg); color: var(--text-main); min-height: 100vh; padding: 2rem 1rem; }
+    .container { max-width: 900px; margin: 0 auto; }
+    
+    header {
+      text-align: center;
+      padding: 2.5rem 1rem;
+      background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      margin-bottom: 2rem;
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+    }
+    .badge {
+      display: inline-block;
+      background: rgba(37, 99, 235, 0.2);
+      color: #60a5fa;
+      padding: 0.35rem 0.85rem;
+      border-radius: 9999px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      border: 1px solid rgba(96, 165, 250, 0.3);
+    }
+    h1 { font-size: 2.2rem; font-weight: 700; margin-bottom: 0.75rem; letter-spacing: -0.02em; }
+    p.subtitle { color: var(--text-muted); font-size: 1.05rem; line-height: 1.6; max-width: 650px; margin: 0 auto 1.5rem; }
+    
+    .btn-group { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.75rem 1.4rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: all 0.2s ease;
+    }
+    .btn-primary { background-color: var(--primary); color: white; }
+    .btn-primary:hover { background-color: var(--primary-dark); transform: translateY(-2px); }
+    .btn-colab { background: linear-gradient(135deg, #d97706 0%, #b45309 100%); color: white; }
+    .btn-colab:hover { filter: brightness(1.1); transform: translateY(-2px); }
+    .btn-outline { background: transparent; color: var(--text-main); border: 1px solid var(--border); }
+    .btn-outline:hover { background: var(--card-bg); transform: translateY(-2px); }
+
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-bottom: 2rem; }
+    .card {
+      background-color: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.5rem;
+    }
+    .card h2 { font-size: 1.25rem; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem; }
+    .card ul { list-style: none; }
+    .card li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.6rem;
+      margin-bottom: 0.85rem;
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+    .card li strong { color: var(--text-main); }
+    .icon-check { color: var(--success); font-weight: bold; }
+
+    footer { text-align: center; color: var(--text-muted); font-size: 0.85rem; padding: 2rem 0; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <span class="badge">🚀 클라우드 런타임 & Vercel 배포 완료</span>
+      <h1>Google Colab & Antigravity Agent</h1>
+      <p class="subtitle">
+        구글의 무료 클라우드 인프라와 안티그래비티 에이전트 가드레일이 연동된 데이터 분석 및 자동화 프로젝트입니다.
+      </p>
+      <div class="btn-group">
+        <a href="https://colab.research.google.com/github/skp3193-svg/colab-agent-project/blob/main/colab_runtime_setup.ipynb" target="_blank" class="btn btn-colab">
+          ⚡ Google Colab에서 즉시 열기
+        </a>
+        <a href="https://github.com/skp3193-svg/colab-agent-project" target="_blank" class="btn btn-outline">
+          📂 GitHub 저장소 보기
+        </a>
+      </div>
+    </header>
+
+    <div class="grid">
+      <div class="card">
+        <h2>🛡️ 에이전트 보안 가드레일 (low.md)</h2>
+        <ul>
+          <li><span class="icon-check">✓</span> <div><strong>Human-in-the-Loop</strong>: 파일 수정 및 터미널 실행 시 사람 승인 필수</div></li>
+          <li><span class="icon-check">✓</span> <div><strong>Fact-Checking</strong>: 기억에 의존하지 않고 공식 문서 기반 검증</div></li>
+          <li><span class="icon-check">✓</span> <div><strong>Secret Protection</strong>: .env 및 API Key 등 기밀 정보 철저 보호</div></li>
+          <li><span class="icon-check">✓</span> <div><strong>Destructive Guard</strong>: 파괴적 명령어 실행 및 임의 범위 확장 차단</div></li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>⚡ 클라우드 런타임 환경 상태</h2>
+        <ul>
+          <li><span class="icon-check">✓</span> <div><strong>Python 버전</strong>: 3.13 (Google Cloud Linux)</div></li>
+          <li><span class="icon-check">✓</span> <div><strong>데이터 처리</strong>: Pandas 2.x, NumPy 연동 완료</div></li>
+          <li><span class="icon-check">✓</span> <div><strong>시각화</strong>: Matplotlib, Seaborn 차트 생성 완료</div></li>
+          <li><span class="icon-check">✓</span> <div><strong>하드웨어</strong>: 무료 T4 GPU 가속기 호환</div></li>
+        </ul>
+      </div>
+    </div>
+
+    <footer>
+      <p>© 2026 skp3193-svg • Built with Google Colab, GitHub & Vercel</p>
+    </footer>
+  </div>
+</body>
+</html>
